@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pytest
 from variations import Variations
-from application_for_create_contact import Application
+from application import Application
 
 @pytest.fixture
 def app(request):
