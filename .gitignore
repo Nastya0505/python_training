@@ -128,6 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-add_group.py
+
 contact.py
 
