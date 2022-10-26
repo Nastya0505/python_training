@@ -129,9 +129,5 @@ dmypy.json
 .pyre/
 
 add_group.py
-application.py
 contact.py
-create_contact.py
-fixture.py
-group.py
-variations.py
+
