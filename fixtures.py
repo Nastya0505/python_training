@@ -34,4 +34,3 @@ def test_add_empty_group(app):
     app.create_group(Group_Groups(name="", header="", footer=""))
     app.logout()
 
-
