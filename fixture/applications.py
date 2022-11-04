@@ -1,14 +1,14 @@
 from selenium import webdriver
+from fixture.session import SessionHelper
 
 class Application:
 
     def __init__(self):
         self.wd = webdriver.Firefox()
         self.wd.implicitly_wait(30)
+        self.session = SessionHelper(self)
 
-    def logout(self):
-        wd = self.wd
-        wd.find_element_by_link_text("Logout").click()
+
 
     def return_to_homepage(self):
         wd = self.wd
@@ -79,17 +79,7 @@ class Application:
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
         self.return_to_homepage()
 
-    def login(self, username="admin", password="secret"):
-        wd = self.wd
-        self.open_homepage()
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys(username)
-        wd.find_element_by_id("content").click()
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys(password)
-        wd.find_element_by_xpath("//input[@value='Login']").click()
+
 
     def open_homepage(self):
         wd = self.wd
