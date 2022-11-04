@@ -26,3 +26,4 @@ class Group_Contacts:
         self.user_addres2=user_addres2
         self.user_phone2=user_phone2
         self.user_notes=user_notes
+

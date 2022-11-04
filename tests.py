@@ -2,7 +2,7 @@
 import pytest
 from group import Group_Groups
 from group import Group_Contacts
-from application import Application
+from applications import Application
 
 @pytest.fixture
 def app(request):
