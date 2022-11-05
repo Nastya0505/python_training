@@ -77,9 +77,11 @@ class ContactHelper:
         #open home page
         wd.get("http://localhost/addressbook/")
         #initiate deletion
-        wd.find_element_by_title("Edit").click()
+        wd.find_element_by_name("selected[]").click()
         #submit deletion
         wd.find_element_by_value("Delete").click()
+        #accept the deletion
+        wd.switch_to.alert.accept()
 
     def modify_first_contact(self):
         wd = self.wd
