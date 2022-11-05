@@ -71,3 +71,27 @@ class ContactHelper:
         # submit contact creation
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
         self.return_to_homepage()
+
+    def delete_first_contact(self):
+        wd = self.wd
+        #open home page
+        wd.get("http://localhost/addressbook/")
+        #initiate deletion
+        wd.find_element_by_title("Edit").click()
+        #submit deletion
+        wd.find_element_by_value("Delete").click()
+
+    def modify_first_contact(self):
+        wd = self.wd
+        #open home page
+        wd.get("http://localhost/addressbook/")
+        #initiate modification
+        wd.find_element_by_title("Edit").click()
+        #submit modification
+        wd.find_element_by_name("Update").click()
+
+
+
+
+
+
