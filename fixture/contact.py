@@ -73,24 +73,25 @@ class ContactHelper:
         self.return_to_homepage()
 
     def delete_first_contact(self):
-        wd = self.wd
+        wd = self.app.wd
         #open home page
         wd.get("http://localhost/addressbook/")
+        wd.find_element_by_link_text("home").click()
         #initiate deletion
         wd.find_element_by_name("selected[]").click()
         #submit deletion
-        wd.find_element_by_value("Delete").click()
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
         #accept the deletion
         wd.switch_to.alert.accept()
 
     def modify_first_contact(self):
-        wd = self.wd
+        wd = self.app.wd
         #open home page
         wd.get("http://localhost/addressbook/")
         #initiate modification
-        wd.find_element_by_title("Edit").click()
+        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[3]/td[8]/a/img").click()
         #submit modification
-        wd.find_element_by_name("Update").click()
+        wd.find_element_by_xpath("//div[@id='content']/form/input[22]").click()
 
 
 
