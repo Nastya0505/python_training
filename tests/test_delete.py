@@ -6,9 +6,9 @@ def test_delete_first_group(app):
         app.group.create(Group(name="test"))
     app.group.delete_first_group()
 
-# def test_delete_first_contact(app):
-#     if app.contact.count() == 0:
-#         app.contact.create(Contact(f_name="test"))
-#     app.contact.delete_first_contact()
+def test_delete_first_contact(app):
+    if app.contact.count() == 0:
+        app.contact.create(Contact(f_name="test"))
+    app.contact.delete_first_contact()
 
 
