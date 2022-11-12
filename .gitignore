@@ -127,7 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
+tests_delete.py
+tests_modify.py
 
 
 
